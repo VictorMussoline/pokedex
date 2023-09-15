@@ -1,4 +1,4 @@
-fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
+fetch('https://pokeapi.co/api/v2/pokemon?limit=100')
     .then(response => response.json())
     .then(allpokemon => {
 
@@ -11,7 +11,7 @@ fetch('https://pokeapi.co/api/v2/pokemon?limit=10')
             .then(pokemonSingle => {     
                 pokemons.push({nome:val.name,imagem:pokemonSingle.sprites.front_default});
 
-                if(pokemons.length == 9){
+                if(pokemons.length == 99){
                     //finalizamos nossas requisições
 
                     var pokemonBoxes = document.querySelector('.pokemon-boxes');
